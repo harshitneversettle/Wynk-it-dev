@@ -1,19 +1,10 @@
 import { WalletMultiButton } from "@solana/wallet-adapter-react-ui";
-import { useState } from "react";
 import { LuArrowRight } from "react-icons/lu";
 import { useNavigate } from "react-router-dom";
 
 export default function LandingPage() {
   const navigate = useNavigate();
-  interface GoogleUser {
-    email: string;
-    name: string;
-    firstname: string;
-    picture: string;
-    sub: number;
-  }
-
-  const [user, setUser] = useState<GoogleUser | null>(null);
+  
 
   return (
     <div
@@ -40,7 +31,7 @@ export default function LandingPage() {
             about project
           </button>
           <button className="text-lg text-zinc-300 hover:text-zinc-200 tracking-widest transition-colors">
-            {user ? `Welcome, ${user.firstname}!` : "sign in"}
+           sign in
           </button>
           <button
             onClick={() => {
